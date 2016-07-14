@@ -1,5 +1,6 @@
 <?php 
 require_once('Controller.php');
+require_once('app/model/Tree.php');
 
 class partController extends Controller{
 	public function part1(){
@@ -11,6 +12,10 @@ class partController extends Controller{
 	}
 
 	public function part3(){
+		print_r(Tree::getAllTree());
+
+		// TODO build Tree
+
 		$this->render('part', 'part3');
 	}
 

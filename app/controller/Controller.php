@@ -5,8 +5,10 @@ class Controller{
 
 	protected $viewTitle;
 	protected $viewBody;
+	protected $viewData;
 
-	public function render($controller, $action, $params = null){
+	public function render($controller, $action, $data = null){
+		$this->viewData = $data;
 		$this->viewBody = self::VIEW_PATH . $controller . '/' . $action . '.php';
 
 		require_once(self::LAYOUT);

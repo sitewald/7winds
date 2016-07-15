@@ -40,7 +40,8 @@ PPP
 	<div class="col-md-6">
 		<div class="bg-info content-wrapper">
 			<h4><u>Решение</u></h4>
-			<!--TODO-->
+
+			<?php echo $data['tree']; ?>
 		</div>
 	</div>
 </div>

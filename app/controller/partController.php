@@ -12,11 +12,9 @@ class partController extends Controller{
 	}
 
 	public function part3(){
-		print_r(Tree::getAllTree());
+		$stringTree = Tree::getTotalStringStructure();
 
-		// TODO build Tree
-
-		$this->render('part', 'part3');
+		$this->render('part', 'part3', array('tree' => $stringTree));
 	}
 
 	public function part4(){

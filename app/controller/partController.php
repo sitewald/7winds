@@ -18,11 +18,15 @@ class partController extends Controller{
 	}
 
 	public function part4(){
-		$this->render('part', 'part4');
+		$result = Tree::getItemsForPart4();
+
+		$this->render('part', 'part4', array('result' => $result));
 	}
 
 	public function part5(){
-		$this->render('part', 'part5');
+		$result = Tree::getItemsForPart5();
+
+		$this->render('part', 'part5', array('result' => $result));
 	}
 
 	public function part6(){

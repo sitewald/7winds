@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-md-6">
 		<div class="bg-info content-wrapper">
-			<h4><u>Задание</u></h4>
+			<h4><u>Задание 2</u></h4>
 <pre>
 Дан текст в который включены ключи raz: dva: tri:
 текст может располагаться как перед ключами так и после

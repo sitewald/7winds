@@ -1,5 +1,6 @@
 <?php 
 require_once('app/helpers/DbHelper.php');
+require_once('app/helpers/Constant.php');
 require_once('TreeItem.php');
 
 class Tree{
@@ -14,6 +15,20 @@ class Tree{
 		}
 
 		return $stringTree;
+	}
+
+	public static function getItemsForPart4(){
+		return array(
+				'query' => Constant::QUERY_PART_4,
+				'items' => self::getObjectsFromRows(Constant::QUERY_PART_4)
+			);
+	}
+
+	public static function getItemsForPart5(){
+		return array(
+				'query' => Constant::QUERY_PART_5,
+				'items' => self::getObjectsFromRows(Constant::QUERY_PART_5)
+			);
 	}
 
 	private static function buildTree(){
@@ -32,19 +47,7 @@ class Tree{
 	}
 
 	private static function getAll(){
-		$query = 'SELECT * FROM tree';
-
-		$rows = DbHelper::getData($query);
-
-		$items = array();
-
-		foreach($rows as $row){
-			 $item = new TreeItem($row[0], $row[1], $row[2]);
-
-			 array_push($items, $item);
-		}
-
-		return $items;
+		return self::getObjectsFromRows(Constant::GET_ALL_TREE_ITEMS);
 	}
 
 	private static function buildOneBranch(TreeItem $parent, $items){
@@ -57,6 +60,18 @@ class Tree{
 		}
 
 		return $parent;
+	}
+
+	private static function getObjectsFromRows($query){
+		$rows = DbHelper::getData($query);
+		$items = array();
+
+		foreach($rows as $row){
+			 $item = new TreeItem($row[0], $row[1], $row[2]);
+			 array_push($items, $item);
+		}
+
+		return $items;
 	}
 }
 

@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-md-6">
 		<div class="bg-info content-wrapper">
-			<h4><u>Задание</u></h4>
+			<h4><u>Задание 3</u></h4>
 <pre>
 Дана таблица в базе MySQL с полями:
     id  - ключ

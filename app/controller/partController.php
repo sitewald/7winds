@@ -42,7 +42,28 @@ class partController extends Controller{
 	}
 
 	public function part6(){
-		$this->render('part', 'part6');
+		$arr = array_fill(0, 1000000, 100001);
+
+		$start = round(microtime(true) * 1000);
+
+		$duplicate = array();
+
+		for($i = 0; $i < 1000000; $i++){
+			if(!in_array($arr[$i], $duplicate)){
+				$duplicate[] = $arr[$i];
+			}
+
+			unset($arr[$i]);
+		}
+
+		$end = round(microtime(true) * 1000);
+
+		$time = $end - $start;
+
+		$this->render('part', 'part6', array(
+				'time' => 'Выбор повторяющихся чисел занял ' . $time . ' милисекунд',
+				'code' => Constant::CODE_PART6
+			));
 	}
 
 	public function part7(){

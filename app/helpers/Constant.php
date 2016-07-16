@@ -40,5 +40,24 @@ sometimes on (injected humour and the like).
 'some text some text some text raz: text raz text
 text raz dva: text dva text dva text tri: text
 text tri text tri raz: text raz-2 text raz-2 text raz-2';
+
+//------------------------------------------------------------------
+
+	const CODE_PART6 = 
+'
+$arr = array_fill(0, 1000000, 100001);
+
+$duplicate = array();
+
+for($i = 0; $i < 1000000; $i++){
+	if(!in_array($arr[$i], $duplicate)){
+		$duplicate[] = $arr[$i];
+	}
+
+	unset($arr[$i]);
+}
+
+return $duplicate;
+';
 }
 ?>

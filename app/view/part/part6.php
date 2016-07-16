@@ -13,7 +13,14 @@
 	<div class="col-md-6">
 		<div class="bg-info content-wrapper">
 			<h4><u>Решение</u></h4>
-			<!--TODO-->
+			<h5>
+				<?php echo $data['time']; ?>
+			</h5>
+			<div>
+<pre>
+<?php echo $data['code']; ?>
+</pre>
+			</div>
 		</div>
 	</div>
 </div>

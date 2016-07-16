@@ -6,16 +6,21 @@ require_once('app/helpers/RegularHelper.php');
 
 class partController extends Controller{
 	public function part1(){
-		$result = RegularHelper::parseTags(Constant::TEXT_FOR_REGULAR);
+		$result = RegularHelper::parseTags(Constant::TEXT_FOR_REGULAR1);
 
 		$this->render('part', 'part1', array(
-				'text' => Constant::TEXT_FOR_REGULAR,
+				'text' => Constant::TEXT_FOR_REGULAR1,
 				'result' => $result
 			));
 	}
 
 	public function part2(){
-		$this->render('part', 'part2');
+		$result = RegularHelper::getTextBetweenKeys(Constant::TEXT_FOR_REGULAR2);
+
+		$this->render('part', 'part2', array(
+				'text' => Constant::TEXT_FOR_REGULAR2,
+				'result' => $result
+			));
 	}
 
 	public function part3(){

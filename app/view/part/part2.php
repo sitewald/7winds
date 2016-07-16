@@ -20,7 +20,16 @@
 	<div class="col-md-6">
 		<div class="bg-info content-wrapper">
 			<h4><u>Решение</u></h4>
-			<!--TODO-->
+			
+			<h5><u>Текст</u></h5>
+<pre>
+<?php echo $data['text']; ?>
+</pre>
+
+			<h5><u>Результат</u></h5>
+<pre>
+<?php print_r($data['result']); ?>
+</pre>
 		</div>
 	</div>
 </div>

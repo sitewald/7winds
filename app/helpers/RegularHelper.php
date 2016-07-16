@@ -35,5 +35,42 @@ class RegularHelper{
 				'second array' => $key_description
 			);
 	}
+
+	public static function getTextBetweenKeys($text){
+		$keys = self::getAllTags('/raz:|dva:|tri:/', $text);
+		$result = array();
+
+		if(!isset($keys[0])) return $result;
+
+		$count = count($keys[0]);
+
+		for($i = 0; $i < $count; $i++){
+			// --- rewrite value of last key in list
+			//
+			if($i == $count - 1){
+				$regular = '/^.*' . $keys[0][$i] . '(.*)$/s';
+				preg_match_all($regular, $text, $values);
+
+				if(!isset($values[1][0])) break;
+
+				$result[$keys[0][$i]] = $values[1][0];
+
+				break;
+			}
+
+			// ---------- get text between two keys
+			// ---------- /(?<=raz:).*(?=dva:)/s
+			//
+			$regular = '/(?<=' . $keys[0][$i] . ').*(?=' . $keys[0][$i + 1] . ')/s';
+			
+			preg_match_all($regular, $text, $values);
+
+			if(!isset($values[0][0])) continue;
+
+			$result[$keys[0][$i]] = $values[0][0];
+		}
+
+		return $result;
+	}
 }
 ?>

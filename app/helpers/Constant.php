@@ -21,7 +21,7 @@ EXISTS(SELECT * FROM tree WHERE (
 			parent IN (SELECT id FROM tree WHERE parent IS NULL))));';
 
 // -----------------------------------------------------------------
-	const TEXT_FOR_REGULAR = 
+	const TEXT_FOR_REGULAR1 = 
 'It is a long established fact that a reader will be distracted 
 by the readable content of a page when looking at its layout. 
 The point of using Lorem Ipsum is that it has a more-or-less 
@@ -34,6 +34,11 @@ for \'lorem ipsum\' will uncover many web sites still in their infancy.
 Various versions have evolved over the years, sometimes by accident, 
 sometimes on (injected humour and the like).
 [third]third data[/third]';
-}
 
+//------------------------------------------------------------------
+	const TEXT_FOR_REGULAR2 = 
+'some text some text some text raz: text raz text
+text raz dva: text dva text dva text tri: text
+text tri text tri raz: text raz-2 text raz-2 text raz-2';
+}
 ?>

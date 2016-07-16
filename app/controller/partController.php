@@ -1,10 +1,17 @@
 <?php 
 require_once('Controller.php');
 require_once('app/model/Tree.php');
+require_once('app/helpers/Constant.php');
+require_once('app/helpers/RegularHelper.php');
 
 class partController extends Controller{
 	public function part1(){
-		$this->render('part', 'part1');
+		$result = RegularHelper::parseTags(Constant::TEXT_FOR_REGULAR);
+
+		$this->render('part', 'part1', array(
+				'text' => Constant::TEXT_FOR_REGULAR,
+				'result' => $result
+			));
 	}
 
 	public function part2(){

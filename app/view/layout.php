@@ -14,8 +14,8 @@
 	<div class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand btn btn-success" href="<?php echo Helper::url('home', 'index'); ?>">
-					<span class='text-white'>7 ветров. Тестовое задание</span>
+				<a class="navbar-brand" href="<?php echo Helper::url('home', 'index'); ?>">
+					<small><var>7 ветров Тестовое задание</var></small>
 				</a>
 			</div>
 

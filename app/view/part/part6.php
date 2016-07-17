@@ -24,3 +24,9 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#li-6').addClass('active');
+	});
+</script>

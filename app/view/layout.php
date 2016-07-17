@@ -14,20 +14,20 @@
 	<div class="navbar navbar-inverse">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="<?php echo Helper::url('home', 'index'); ?>">
-					Тестовое задание
+				<a class="navbar-brand btn btn-success" href="<?php echo Helper::url('home', 'index'); ?>">
+					<span class='text-white'>7 ветров. Тестовое задание</span>
 				</a>
 			</div>
 
 			<div>
 				<ul class="nav navbar-nav">
-					<li><a href="<?php echo Helper::url('part', 'part1'); ?>">Часть 1</a></li>
-					<li><a href="<?php echo Helper::url('part', 'part2'); ?>">Часть 2</a></li>
-					<li><a href="<?php echo Helper::url('part', 'part3'); ?>">Часть 3</a></li>
-					<li><a href="<?php echo Helper::url('part', 'part4'); ?>">Часть 4</a></li>
-					<li><a href="<?php echo Helper::url('part', 'part5'); ?>">Часть 5</a></li>
-					<li><a href="<?php echo Helper::url('part', 'part6'); ?>">Часть 6</a></li>
-					<li><a href="<?php echo Helper::url('part', 'part7'); ?>">Часть 7</a></li>
+					<li id='li-1'><a href="<?php echo Helper::url('part', 'part1'); ?>">Часть 1</a></li>
+					<li id='li-2'><a href="<?php echo Helper::url('part', 'part2'); ?>">Часть 2</a></li>
+					<li id='li-3'><a href="<?php echo Helper::url('part', 'part3'); ?>">Часть 3</a></li>
+					<li id='li-4'><a href="<?php echo Helper::url('part', 'part4'); ?>">Часть 4</a></li>
+					<li id='li-5'><a href="<?php echo Helper::url('part', 'part5'); ?>">Часть 5</a></li>
+					<li id='li-6'><a href="<?php echo Helper::url('part', 'part6'); ?>">Часть 6</a></li>
+					<li id='li-7'><a href="<?php echo Helper::url('part', 'part7'); ?>">Часть 7</a></li>
 				</ul>
 			</div>
 		</div>

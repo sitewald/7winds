@@ -33,3 +33,9 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#li-2').addClass('active');
+	});
+</script>

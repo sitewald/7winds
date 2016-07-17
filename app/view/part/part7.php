@@ -51,3 +51,9 @@ a3 b2 c3 d1
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#li-7').addClass('active');
+	});
+</script>

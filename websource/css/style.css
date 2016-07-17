@@ -1,3 +1,4 @@
+
 .developer-image{
 	width: 100px;
 	float: right;
@@ -6,4 +7,8 @@
 .content-wrapper{
 	padding: 20px;
 	border: 1px solid #6FA1BB;
+}
+
+.text-white{
+	color: #fff;
 }

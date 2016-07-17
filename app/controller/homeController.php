@@ -6,9 +6,8 @@ class homeController extends Controller{
 		$this->viewTitle = 'Главная страница';
 
 		$this->render('home', 'index', array(
-				'row1' => 'Выполнял Белозеров Сергей',
-				'row2' => 'Начало - 14 июля 14:50',
-				'row3' => 'Окончание - '
+				'row1' => 'Белозеров Сергей',
+				'row2' => 'Начало - 14 июля 14:50'
 			));
 	}
 }

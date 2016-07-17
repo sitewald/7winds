@@ -41,7 +41,9 @@ PPP
 		<div class="bg-info content-wrapper">
 			<h4><u>Решение</u></h4>
 
+			<div class='div-like-pre'>
 			<?php echo $data['tree']; ?>
+			</div>
 		</div>
 	</div>
 </div>

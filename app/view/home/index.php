@@ -8,6 +8,9 @@
 		<h4>
 			<?php echo $this->viewData['row2']; ?>
 		</h4>
+		<h4>
+			<?php echo $this->viewData['row3']; ?>
+		</h4>
 	</div>
 </div>
 <hr />

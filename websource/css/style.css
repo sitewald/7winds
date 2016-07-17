@@ -8,3 +8,12 @@
 	padding: 20px;
 	border: 1px solid #6FA1BB;
 }
+
+.div-like-pre{
+	border: 1px solid #ccc;
+	background-color: #F5F5F5;
+	padding: 10px;
+	font-family: verdana;
+	font-size: 12px;
+	border-radius: 4px;
+}

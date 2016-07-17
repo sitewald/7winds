@@ -24,34 +24,42 @@ class ArrayHelper{
 	}
 
 	public static function getCombinations(){
-		// $arr = array(
-		// 		array('a1', 'a2', 'a3'),
-		// 		array('b1', 'b2'),
-		// 		array('c1', 'c2', 'c3'),
-		// 		array('d1')
-		// 	);
-
 		$arr = array(
-				array('a1', 'a2'),
-				array('b1', 'b2')
+				array('a1', 'a2', 'a3'),
+				array('b1', 'b2'),
+				array('c1', 'c2', 'c3'),
+				array('d1')
 			);
 
 		$result = array();
 
-		$total = 0;
+		$resultRowIndex = 0;
 
-		foreach($arr as $row){
-			$total *= count($row);
-		}
+		$result = self::recursive($arr, count($arr), 0, $result, $resultRowIndex);
 
-		// a1 b1
-		// a1 b2
-		// a2 b1
-		// a2 b2
-
-		
+		unset($result[$resultRowIndex]);
 
 		return $result;
+	}
+
+	public static function recursive($in, $inLen, $inRowI, $out, &$outRowI){
+		$count = count($in[$inRowI]);
+
+		for ($i = 0; $i < $count; $i++){
+
+			$out[$outRowI][$inRowI] = $in[$inRowI][$i];
+
+			if($inRowI == $inLen - 1){
+
+				$memory = $out[$outRowI];
+				$outRowI++;
+				$out[$outRowI] = $memory;
+			}else{
+				$out = self::recursive($in, $inLen, $inRowI + 1, $out, $outRowI);
+			}
+		}
+
+		return $out;
 	}
 }
 

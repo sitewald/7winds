@@ -43,10 +43,16 @@ a3 b2 c3 d1
 		<div class="bg-info content-wrapper">
 			<h4><u>Решение</u></h4>
 			
-			<div>
-<pre>
-<?php print_r($data['result']); ?>
-</pre>
+			<div class='div-like-pre'>
+			<?php 
+				foreach($data['result'] as $row){
+					foreach($row as $element){
+						echo $element, '&nbsp;';
+					}
+
+					echo '<br />';
+				}
+			?>
 			</div>
 		</div>
 	</div>

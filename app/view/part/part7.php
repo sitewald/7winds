@@ -42,7 +42,12 @@ a3 b2 c3 d1
 	<div class="col-md-6">
 		<div class="bg-info content-wrapper">
 			<h4><u>Решение</u></h4>
-			<!--TODO-->
+			
+			<div>
+<pre>
+<?php print_r($data['result']); ?>
+</pre>
+			</div>
 		</div>
 	</div>
 </div>
